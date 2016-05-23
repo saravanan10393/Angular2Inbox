@@ -1,33 +1,16 @@
-<div layout="row" layout-align="center center">
-  <md-card>
-    <md-card-title>
-      <md-card-title-text>
-        <span class="md-headline">Your Inbox</span>
-      </md-card-title-text>
-    </md-card-title>
-    <md-card-content>
-      <h2 class="title">Login</h2>
-      <form [ngFormControl]="loginForm" (ngSubmit)="login()">
-        <md-input-container class="md-block">
-          <label for="email">Description</label>
-          <input md-input ngControl="email" id="email">
-          <div md-messages="email">
-            <div md-message="required">Email required.</div>
-            <div md-message="invalidEmail">Incorrect Email formet</div>
-          </div>
-        </md-input-container>
-        <md-input-container class="md-block">
-          <label for="password">Description</label>
-          <input md-input ngControl="password" id="password">
-          <div md-messages="password">
-            <div md-message="required">Password required.</div>
-          </div>
-        </md-input-container>
-      </form>
-    </md-card-content>
-    <md-card-actions>
-      <button md-button class="md-warn">Forgot password?</button>
-      <button md-button class="md-primary">Login</button>
-    </md-card-actions>
-  </md-card>
+<div>
+  <h2 class="title">Login</h2>
+  <alert *ngIf="error" type="warning" dismissOnTimeout="3000">{{error}}</alert>
+  <form role="form" [ngFormModel]="loginForm" (ngSubmit)="login()">
+    <div class="form-group">
+      <label for="email">Email address:</label>
+      <input type="email" class="form-control" id="email" ngControl="email" required>
+    </div>
+    <div class="form-group">
+      <label for="password">Password:</label>
+      <input type="password" class="form-control" id="password" ngControl="password" required>
+    </div>
+    <button type="submit" [disabled]="!loginForm.valid" class="btn btn-info">Login</button>
+    <button md-button class="btn btn-warn">Forgot password?</button>
+  </form>
 </div>

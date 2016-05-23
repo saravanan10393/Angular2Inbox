@@ -16,7 +16,8 @@ class FormValidators {
     
     static validateEmail(c:Control):ValidationResult{
         let value = c.value,emailRegex = /\S+@\S+\.\S+/;
-        if(emailRegex.test(value)){
+        console.log('input value ',value);
+        if(!emailRegex.test(value)){
             return {
                 invalidEmail : true
             }

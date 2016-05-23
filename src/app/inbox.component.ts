@@ -1,6 +1,5 @@
 import { Component } from '@angular/core';
 import { Routes ,Router, ROUTER_DIRECTIVES, ROUTER_PROVIDERS} from '@angular/router';
-import {MATERIAL_DIRECTIVES, MATERIAL_PROVIDERS} from "ng2-material/all";
 
 import { LoginComponent } from './+login';
 import { SignupComponent } from './+signup';
@@ -11,8 +10,8 @@ import { DashboardComponent } from './+dashboard';
   selector: 'inbox-app',
   templateUrl: 'inbox.component.html',
   styleUrls: ['inbox.component.css'],
-  directives: [ROUTER_DIRECTIVES,MATERIAL_DIRECTIVES],
-  providers: [ROUTER_PROVIDERS,MATERIAL_PROVIDERS]
+  directives: [ROUTER_DIRECTIVES],
+  providers: [ROUTER_PROVIDERS]
 })
 @Routes([
   {path: '/login', component: LoginComponent},

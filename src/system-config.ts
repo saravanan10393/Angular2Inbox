@@ -3,12 +3,12 @@
  **********************************************************************************************/
 /** Map relative paths to URLs. */
 const map: any = {
-  'ng2-material':'vendor/ng2-material'
+  'ng2-bootsrap':'vendor/ng2-bootstrap'
 };
 
 /** User packages configuration. */
 const packages: any = {
-  'ng2-material':{ main: 'all' }
+  'ng2-boostrap':{ main: 'ng2-boostrap' }
 };
 
 ////////////////////////////////////////////////////////////////////////////////////////////////

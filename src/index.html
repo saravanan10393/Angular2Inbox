@@ -4,13 +4,16 @@
   <meta charset="utf-8">
   <title>Inbox</title>
   <base href="/">
-  <link rel="stylesheet" href="vendor/ng2-material/dist/ng2-material.css">
-  <link rel="stylesheet" href="vendor/ng2-material/font/font.css">
+  <link rel="stylesheet" href="vendor/bootstrap/dist/css/bootstrap.min.css">
+  
   {{#unless environment.production}}
   <script src="/ember-cli-live-reload.js" type="text/javascript"></script>
   {{/unless}}
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <link rel="icon" type="image/x-icon" href="favicon.ico">
+  <script src="vendor/jquery/dist/jquery.min.js"></script>
+  <script src="vendor/bootstrap/dist/js/bootstrap.min.js"></script>
+  <script src="vendor/underscore.string/dist/underscore.string.min.js"></script>
 </head>
 <body>
   <inbox-app>Loading...</inbox-app>
