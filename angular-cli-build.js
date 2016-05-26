@@ -19,7 +19,7 @@ module.exports = function(defaults) {
       'bootstrap/dist/css/bootstrap.min.css',
       'bootstrap/dist/fonts/*.*',
       'jquery/dist/jquery.min.js',
-      'underscore.string/dist/underscore.string.min.js'
+      'underscore/underscore-min.js'
     ]
   });
 };

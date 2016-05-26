@@ -7,7 +7,7 @@ export class LoginService {
   private users:any;
   
   constructor(private http:Http) {
-    http.get('./users.json').subscribe(res => this.users = res.json,err => console.log(err));
+    http.get('/app/+login/users.json').subscribe(res => this.users = res.json(),err => console.log(err));
   }
   
   login(user){

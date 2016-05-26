@@ -4,14 +4,15 @@ import { FORM_DIRECTIVES, FormBuilder, Validators, ControlGroup } from '@angular
 import { AlertComponent } from 'ng2-bootstrap/ng2-bootstrap';
 
 import { FormValidators } from '../shared/customFormValidators';
-import { LoginService } from './shared/login.service.ts';
+import { LoginService } from './shared/login.service';
 
 @Component({
   moduleId: module.id,
   selector: 'app-login',
   templateUrl: 'login.component.html',
   styleUrls: ['login.component.css'],
-  directives: [FORM_DIRECTIVES]
+  directives: [FORM_DIRECTIVES],
+  providers:[LoginService]
 })
 export class LoginComponent implements OnInit {
   
@@ -26,6 +27,7 @@ export class LoginComponent implements OnInit {
   }
   
   login(){
+    debugger;
     if(this.loginService.login(this.loginForm.value)){
       this.router.navigate(['dashboard']);
     } else{
